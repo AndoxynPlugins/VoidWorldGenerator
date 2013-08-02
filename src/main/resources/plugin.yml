@@ -1,0 +1,5 @@
+name: ${project.name}
+main: net.daboross.bukkitdev.voidworld.VoidWorldPlugin
+version: ${project.version}
+author: Dabo Ross
+description: Void world
