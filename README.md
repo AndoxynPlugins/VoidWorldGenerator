@@ -1,4 +1,4 @@
-Plugin-VoidWorld
+VoidWorld
 ================
 
 VoidWorld World generator
