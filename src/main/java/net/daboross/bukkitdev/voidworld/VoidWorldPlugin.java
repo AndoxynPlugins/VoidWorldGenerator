@@ -28,7 +28,7 @@ import org.mcstats.MetricsLite;
 
 /**
  *
- * @author daboross
+ * @author Dabo Ross <http://www.daboross.net/>
  */
 public class VoidWorldPlugin extends JavaPlugin implements Listener {
 

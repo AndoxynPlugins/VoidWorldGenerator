@@ -16,32 +16,32 @@
  */
 package net.daboross.bukkitdev.voidworld;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
-import org.bukkit.Location;
+import org.bukkit.Chunk;
+import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.generator.BlockPopulator;
-import org.bukkit.generator.ChunkGenerator;
 
 /**
  *
  * @author Dabo Ross <http://www.daboross.net/>
  */
-public class VoidGenerator extends ChunkGenerator {
+public class PathPopulator extends BlockPopulator {
 
     @Override
-    public byte[][] generateBlockSections(World world, Random random, int x, int z, BiomeGrid biomes) {
-        return new byte[world.getMaxHeight() / 16][];
+    public void populate(World world, Random random, Chunk chunk) {
+        for (int x = 0; x < 16; x++) {
+            for (int z = 0; z < 16; z++) {
+                chunk.getBlock(x, 3, z).setType(Material.STONE);
+            }
+        }
     }
 
-    @Override
-    public Location getFixedSpawnLocation(World world, Random random) {
-        return new Location(world, 0, world.getMaxHeight() / 2, 0);
-    }
-
-    @Override
-    public List<BlockPopulator> getDefaultPopulators(World world) {
-        return Arrays.<BlockPopulator>asList(new PathPopulator());
+    public void populate(Chunk chunk) {
+        for (int x = 0; x < 16; x++) {
+            for (int z = 0; z < 16; z++) {
+                chunk.getBlock(x, 3, z).setType(Material.STONE);
+            }
+        }
     }
 }
