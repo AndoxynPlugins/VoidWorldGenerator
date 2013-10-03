@@ -1,4 +1,4 @@
 VoidWorld
 ================
 
-VoidWorld World generator
+VoidWorld Generator
